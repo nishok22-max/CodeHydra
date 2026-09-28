@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --color-ink: #0b1f3a;
+  --color-ink-2: #3b4a60;
+  --color-ink-3: #6b7789;
+  --color-paper: #f7f6f2;
+  --color-line: #e2e0d8;
+  --color-sky: #1d5fbf;
+  --color-sun: #e8820c;
+  --color-heat: #c8321f;
+}
+
+html { scroll-behavior: smooth; }
+body { @apply bg-paper text-ink font-sans antialiased; }
+::selection { background: #fde2c4; }
+
+.eyebrow { @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-3; }
+.h2 { @apply text-[clamp(2rem,4.4vw,3.6rem)] font-semibold leading-[1.02] tracking-[-0.025em]; }
+.lede { @apply text-lg leading-relaxed text-ink-2 max-w-2xl; }
+.card { @apply bg-white border border-line rounded-[10px]; }
+.frame { @apply bg-white border border-line rounded-[12px] overflow-hidden shadow-[0_1px_0_#e2e0d8,0_24px_48px_-28px_rgba(11,31,58,0.28)]; }
+.hindi { font-family: "Noto Sans Devanagari", var(--font-sans); }
+.gujarati { font-family: "Noto Sans Gujarati", var(--font-sans); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
